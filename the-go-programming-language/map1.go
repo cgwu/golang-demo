@@ -17,8 +17,15 @@ func main() {
 	person, ok := personDB["12345"]
 	if ok {
 		fmt.Println("Found Person", person.Name, "with ID", person.ID)
-	}else{
+	} else {
 		fmt.Println("未找到")
 	}
+	_, ok2 := personDB["1234"]
+	if ok2 {
+		fmt.Println("Found Person", person.Name, "with ID", person.ID)
+	} else {
+		fmt.Println("未找到")
+	}
+
 	fmt.Println("map1")
 }
