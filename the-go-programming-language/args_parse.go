@@ -15,4 +15,9 @@ func main() {
 	if !*n {
 		fmt.Println()
 	}
+	if "hello" == "hello1" {
+		fmt.Println("yes")
+	}else {
+		fmt.Println("no")
+	}
 }

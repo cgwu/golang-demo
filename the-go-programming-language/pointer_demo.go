@@ -29,4 +29,15 @@ func main() {
 	incr(&v)
 	fmt.Println(v)
 
+	fmt.Println("测试new(int)")
+	pn := new(int)	// p, of type *int, points to an unnamed int variable
+	fmt.Println(*pn)
+	*pn = 2
+	fmt.Println(*pn)
+
+	var i1 int = 1
+	fmt.Println(i1)
+	//i1 = nil	//cannot use nil as type int in assignment
+
+
 }
