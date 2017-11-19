@@ -6,12 +6,19 @@ import (
 	"log"
 )
 
+//func main() {
+//	db := database{"shoes鞋子": 50, "socks": 5}
+//	mux := http.NewServeMux()
+//	mux.Handle("/list", http.HandlerFunc(db.list))
+//	mux.Handle("/price", http.HandlerFunc(db.price))
+//	log.Fatal(http.ListenAndServe("localhost:8001", mux))
+//}
+
 func main() {
-	db := database{"shoes鞋子": 50, "socks": 5}
-	mux := http.NewServeMux()
-	mux.Handle("/list", http.HandlerFunc(db.list))
-	mux.Handle("/price", http.HandlerFunc(db.price))
-	log.Fatal(http.ListenAndServe("localhost:8001", mux))
+	db := database{"shoes": 50, "socks": 5}
+	http.HandleFunc("/list", db.list)
+	http.HandleFunc("/price", db.price)
+	log.Fatal(http.ListenAndServe("localhost:8001", nil))
 }
 
 type dollars float32
