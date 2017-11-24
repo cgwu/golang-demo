@@ -1,0 +1,3 @@
+Hello
+中国
+buffered缓冲的writer
